@@ -27,6 +27,7 @@ dependencies = [
     "scipy",
     "matplotlib",
     "networkx",
+    "pytest-cov",
     #"xtb",
 ]
 
