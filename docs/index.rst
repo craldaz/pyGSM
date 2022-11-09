@@ -5,6 +5,7 @@
 
 Welcome to pygsm's documentation!
 =========================================================
+This is a package.
 
 .. toctree::
    :maxdepth: 2
