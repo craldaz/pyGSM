@@ -274,14 +274,14 @@ class MainGSM(GSM):
                 return
 
             # => Reparam the String <= #
-            if oi < max_iter and not self.isConverged:
+            if oi < max_iter and not self.isConverged and not stage_changed:
                 self.reparameterize(nconstraints=nconstraints)
                 self.get_tangents_opting()
                 self.refresh_coordinates()
                 if self.pTSnode != self.TSnode and self.climb:
                     print("TS node changed after reparameterizing")
                     self.slow_down_climb()
-            elif oi == max_iter and not self.isConverged and not stage_changed:
+            elif oi == max_iter and not self.isConverged:
                 self.ran_out = True
                 print(" Ran out of iterations")
                 return
