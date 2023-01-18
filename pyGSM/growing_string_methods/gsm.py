@@ -6,7 +6,7 @@ from os import path
 sys.path.append(path.dirname(path.dirname(path.abspath(__file__))))
 from coordinate_systems import Distance, Angle, Dihedral, OutOfPlane
 from utilities import nifty, options, block_matrix
-from pygsm.molecule import Molecule
+from pyGSM.molecule import Molecule
 from utilities.manage_xyz import write_molden_geoms
 
 # third party
@@ -33,8 +33,6 @@ def worker(arg):
 
 
 class GSM(object):
-
-    from utilities import units
 
     @staticmethod
     def default_options():
