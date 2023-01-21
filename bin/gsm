@@ -130,7 +130,6 @@ def parse_arguments(verbose=True):
     args = parser.parse_args()
 
     if verbose:
-        print("what the fuck2")
         print_msg()
 
     if args.nproc > 1:

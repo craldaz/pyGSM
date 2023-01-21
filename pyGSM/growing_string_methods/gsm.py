@@ -914,7 +914,7 @@ class GSM(object):
 
                 if NUM_CORE > 1:
 
-                    # 5/14/2021 TS node fucks this up?!
+                    # 5/14/2021 TS node this up?!
                     tans = [ictan[n] if deltadqs[n] < 0 else ictan[n+1] for n in chain(range(1, TSnode), range(TSnode+1, nnodes-1))]  # + [ ictan[n] if deltadqs[n]<0 else ictan[n+1] for n in range(TSnode+1,nnodes-1)]
                     pool = mp.Pool(NUM_CORE)
                     Vecs = pool.map(worker, ((nodes[0].coord_obj, "build_dlc", node.xyz, tan) for node, tan in zip(nodes[1:TSnode] + nodes[TSnode+1:nnodes-1], tans)))
