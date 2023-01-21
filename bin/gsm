@@ -360,7 +360,6 @@ def choose_optimizer(inpfileq: dict):
 
 def main():
 
-    print("WHAT THE FUCK!")
     # argument parsing and header
     inpfileq = parse_arguments(verbose=True)
 
